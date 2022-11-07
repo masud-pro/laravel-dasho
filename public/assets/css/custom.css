@@ -1,0 +1,32 @@
+/* all custom styles */
+
+/* custom margin */
+.mt-8 {
+    margin-top: 8px;
+}
+
+.flot-r {
+    float: right;
+}
+
+.c-alert {
+    position: relative;
+    padding: 8px 16px;
+    border-radius: 2px;
+}
+
+.mb-44 {
+    margin-bottom: 44px;
+}
+
+.image-btn {
+    font-size: 26px;
+    padding: 8px 26px 8px 26px;
+}
+
+.image-card {
+    margin-top: 10px;
+    width: 50%;
+    margin-bottom: 0px;
+    box-shadow: 0 0 0 1px #ffffff;
+}
