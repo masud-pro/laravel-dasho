@@ -71,9 +71,8 @@ class CategoryController extends Controller {
                 $nestedData['id']          = $category->id;
                 $nestedData['name']        = $category->name;
                 $nestedData['description'] = $category->description;
-                // $nestedData['body']       = substr( strip_tags( $category->body ), 0, 50 ) . "...";
-                $nestedData['created_at'] = date( 'j M Y h:i a', strtotime( $category->created_at ) );
-                $nestedData['options']    = "
+                $nestedData['created_at']  = date( 'j M Y h:i a', strtotime( $category->created_at ) );
+                $nestedData['options']     = "
                                           &emsp;<a href='{$show}' title='SHOW' ><span class='far fa-eye'></span></a>
                                           &emsp;<a href='{$edit}' title='EDIT' ><span class='far fa-edit'></span></a>
                                           &emsp;<a href='#' onclick='deleteStore({$category->id})' title='DELETE' ><span class='fas fa-trash'></span></a>

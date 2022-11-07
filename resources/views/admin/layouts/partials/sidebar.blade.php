@@ -71,8 +71,9 @@
                         <li class=""><a href="#" class="">Button</a></li>
 
                         <li class="">
-                            <a href="#" class="">Toasts<span
-                                    class="pcoded-badge label label-danger">NEW</span></a>
+                            <a href="#" class="">Toasts
+                                <span class="pcoded-badge label label-danger">NEW</span>
+                            </a>
                         </li>
                         <li class=""><a href="#" class="">Utilities</a></li>
                     </ul>
@@ -81,8 +82,8 @@
                 <li class="nav-item pcoded-menu-caption">
                     <label>Administration</label>
                 </li>
-                <li data-username="dashboard" class="nav-item">
-                    <a href="{{ route('dashboard') }}" class="nav-link">
+                <li data-username="setting" class="nav-item">
+                    <a href="#" class="nav-link">
                         <span class="pcoded-micon"><i class="feather icon-sliders"></i></span>
                         <span class="pcoded-mtext">Setting</span>
                     </a>

@@ -73,7 +73,7 @@ class UserController extends Controller {
                 $delete     = route( 'users.destroy', $user->id );
                 $profile    = "profile";
                 $token      = csrf_token();
-                $user_type  = $user->type === 1 ? 'admin' : 'manager';
+                $user_type  = $user->type === 1 ? 'Admin' : 'Manager';
                 $userStatus = $user->status;
                 if ( $userStatus == 1 ) {
                     $userStatus = 'Open';
@@ -83,12 +83,12 @@ class UserController extends Controller {
                     $userStatus = 'Close';
                 }
 
-                $nestedData['id']     = $user->id;
-                $nestedData['name']   = $user->name;
-                $nestedData['phone']  = $user->phone;
-                $nestedData['email']  = $user->email;
-                $nestedData['status'] = $userStatus;
-                $nestedData['type']   = $user_type;
+                $nestedData['id']         = $user->id;
+                $nestedData['name']       = $user->name;
+                $nestedData['phone']      = $user->phone;
+                $nestedData['email']      = $user->email;
+                $nestedData['status']     = $userStatus;
+                $nestedData['type']       = $user_type;
                 $nestedData['created_at'] = date( 'j M Y h:i a', strtotime( $user->created_at ) );
                 $nestedData['options']    = "
                                           &emsp;<a href='{$show}' title='SHOW' ><span class='far fa-eye'></span></a>

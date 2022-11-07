@@ -71,7 +71,6 @@ class BrandController extends Controller {
                 $nestedData['id']          = $brand->id;
                 $nestedData['name']        = $brand->name;
                 $nestedData['description'] = $brand->description;
-                // $nestedData['body']       = substr( strip_tags( $brand->body ), 0, 50 ) . "...";
                 $nestedData['created_at'] = date( 'j M Y h:i a', strtotime( $brand->created_at ) );
                 $nestedData['options']    = "
                                           &emsp;<a href='{$show}' title='SHOW' ><span class='far fa-eye'></span></a>

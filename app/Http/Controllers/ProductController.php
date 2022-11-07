@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Brand;
 use App\Models\Product;
-use App\Models\Category;
 use App\Models\Supplier;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreProductRequest;
@@ -82,17 +81,16 @@ class ProductController extends Controller {
                 $nestedData['id']          = $products->id;
                 $nestedData['name']        = $products->name;
                 $nestedData['description'] = $products->description;
-                // $nestedData['body']       = substr( strip_tags( $products->body ), 0, 50 ) . "...";
-                $nestedData['created_at'] = date( 'j M Y h:i a', strtotime( $products->created_at ) );
-                $nestedData['options']    = "
-                                          &emsp;<a href='{$show}' title='SHOW' ><span class='far fa-eye'></span></a>
-                                          &emsp;<a href='{$edit}' title='EDIT' ><span class='far fa-edit'></span></a>
-                                          &emsp;<a href='#' onclick='deleteStore({$products->id})' title='DELETE' ><span class='fas fa-trash'></span></a>
-                                          <form id='delete-form-{$products->id}' action='{$delete}' method='POST' style='display: none;'>
-                                          <input type='hidden' name='_token' value='{$token}'>
-                                          <input type='hidden' name='_method' value='DELETE'>
-                                          </form>
-                                          ";
+                $nestedData['created_at']  = date( 'j M Y h:i a', strtotime( $products->created_at ) );
+                $nestedData['options']     = "
+                                            &emsp;<a href='{$show}' title='SHOW' ><span class='far fa-eye'></span></a>
+                                            &emsp;<a href='{$edit}' title='EDIT' ><span class='far fa-edit'></span></a>
+                                            &emsp;<a href='#' onclick='deleteStore({$products->id})' title='DELETE' ><span class='fas fa-trash'></span></a>
+                                            <form id='delete-form-{$products->id}' action='{$delete}' method='POST' style='display: none;'>
+                                            <input type='hidden' name='_token' value='{$token}'>
+                                            <input type='hidden' name='_method' value='DELETE'>
+                                            </form>
+                                            ";
                 $data[] = $nestedData;
 
             }
@@ -115,9 +113,9 @@ class ProductController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create() {
-        $products = Product::get();
-        $brands     = Brand::get();
-        $suppliers  = Supplier::get();
+        $products  = Product::get();
+        $brands    = Brand::get();
+        $suppliers = Supplier::get();
         return view( 'admin.products.create', compact( 'products', 'brands', 'suppliers' ) );
     }
 

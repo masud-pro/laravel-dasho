@@ -22,9 +22,7 @@ return new class extends Migration
             $table->double('origin_price');
             $table->double('price');
             $table->double('quantity');
-         //   $table->tinyInteger('discount_type')->nullable()->comment('1 = Percentage, 0 = Fixed Amount');
             $table->foreignId('supplier_id')->constrained()->onDelete('restrict');
-          //  $table->foreignId('user_id')->constrained()->onDelete('restrict');
             $table->foreignId('brand_id')->constrained()->onDelete('restrict');
             $table->foreignId('category_id')->constrained()->onDelete('restrict');
             $table->timestamps();
