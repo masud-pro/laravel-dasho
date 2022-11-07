@@ -1,0 +1,6 @@
+models:
+    Brand: { name: string, description: string }
+    Category: { name: string, description: string }
+    Dashboard: {  }
+    Product: { name: string, slug: string, description: text, featured_image: 'string nullable', origin_price: 'float:10', price: 'float:10', quantity: 'float:10', supplier_id: 'biginteger unsigned', brand_id: 'biginteger unsigned', category_id: 'biginteger unsigned' }
+    Supplier: { name: string, phone: string, email: 'string nullable' }

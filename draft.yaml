@@ -1,0 +1,99 @@
+models:
+    User:
+        id: bigInteger primary
+        avatar: string nullable
+        role_id: bigInteger nullable
+        settings: text nullable
+    DataType:
+        id: integer primary
+        name: string unique
+        slug: string unique
+        display_name_singular: string
+        display_name_plural: string
+        icon: string nullable
+        model_name: string nullable
+        policy_name: string nullable
+        controller: string nullable
+        description: string nullable
+        generate_permissions: boolean
+        server_side: tinyInteger
+        details: text nullable
+        created_at: dateTime
+        updated_at: dateTime
+    Menu:
+        id: integer primary
+        name: string unique
+        created_at: dateTime
+        updated_at: dateTime
+    MenuItem:
+        id: integer primary
+        menu_id: integer nullable
+        title: string
+        url: string
+        target: string
+        icon_class: string nullable
+        color: string nullable
+        parent_id: integer nullable
+        order: integer
+        created_at: dateTime
+        updated_at: dateTime
+        route: string nullable
+        parameters: text nullable
+    Role:
+        id: bigInteger primary
+        name: string unique
+        display_name: string
+        created_at: dateTime
+        updated_at: dateTime
+    Setting:
+        id: integer primary
+        key: string unique
+        display_name: string
+        value: text nullable
+        details: text nullable
+        type: string
+        order: integer
+        group: integer nullable
+    Permission:
+        id: bigInteger primary
+        key: string index
+        table_name: string nullable
+        created_at: dateTime
+        updated_at: dateTime
+    PermissionRole:
+        id: false
+        permission_id: bigInteger index
+        role_id: bigInteger index
+        indexes:
+            - primary: permission_id, role_id
+    Translation:
+        id: integer primary
+        table_name: string
+        column_name: string
+        foreign_key: integer
+        locale: string
+        value: text
+        created_at: dateTime
+        updated_at: dateTime
+        indexes:
+            - unique: table_name, column_name, foreign_key, locale
+    DataRow:
+        id: integer primary
+        data_type_id: integer
+        field: string
+        type: string
+        display_name: string
+        required: boolean
+        browse: boolean
+        read: boolean
+        edit: boolean
+        add: boolean
+        delete: boolean
+        details: text nullable
+        order: integer
+    UserRole:
+        id: false
+        user_id: bigInteger index
+        role_id: bigInteger index
+        indexes:
+            - primary: user_id, role_id
