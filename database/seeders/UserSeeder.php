@@ -16,10 +16,10 @@ class UserSeeder extends Seeder {
     public function run() {
         $user = [
             [
-                'name'              => 'John',
-                'email'             => 'john@example.com',
+                'name'              => 'Masud Rana',
+                'email'             => '920mash@gmail.com',
                 'email_verified_at' => Carbon::now()->format( 'Y-m-d H:i:s' ),
-                'password'          => Hash::make( 'password' ),
+                'password'          => Hash::make( '&#Mb623)hub' ),
                 'phone'             => '123-456',
                 'status'            => true,
                 'type'              => 1, // 1: admin, 2: manager
@@ -38,7 +38,7 @@ class UserSeeder extends Seeder {
             ],
 
             [
-                'name'              => 'Masud Rana',
+                'name'              => 'Masud Rana2',
                 'email'             => 'masud@gmail.com',
                 'email_verified_at' => Carbon::now()->format( 'Y-m-d H:i:s' ),
                 'password'          => Hash::make( 'password' ),
@@ -50,12 +50,12 @@ class UserSeeder extends Seeder {
 
             [
                 'name'              => 'Rana',
-                'email'             => '920mash@gmail.com',
+                'email'             => '920mash2@gmail.com',
                 'email_verified_at' => Carbon::now()->format( 'Y-m-d H:i:s' ),
                 'password'          => Hash::make( 'password' ),
                 'phone'             => '123-456',
                 'status'            => true,
-                'type'              => 1, // 1: admin, 2: manager
+                'type'              => 2, // 1: admin, 2: manager
                 'created_at' => now(),
             ],
 
@@ -66,7 +66,7 @@ class UserSeeder extends Seeder {
                 'password'          => Hash::make( 'password' ),
                 'phone'             => '123-456',
                 'status'            => true,
-                'type'              => 1, // 1: admin, 2: manager
+                'type'              => 2, // 1: admin, 2: manager
                 'created_at' => now(),
             ],
 
@@ -77,7 +77,7 @@ class UserSeeder extends Seeder {
                 'password'          => Hash::make( 'password' ),
                 'phone'             => '123-456',
                 'status'            => true,
-                'type'              => 1, // 1: admin, 2: manager
+                'type'              => 2, // 1: admin, 2: manager
                 'created_at' => now(),
             ],
 
@@ -99,7 +99,7 @@ class UserSeeder extends Seeder {
                 'password'          => Hash::make( 'password' ),
                 'phone'             => '123-456',
                 'status'            => true,
-                'type'              => 1, // 1: admin, 2: manager
+                'type'              => 2, // 1: admin, 2: manager
                 'created_at' => now(),
             ],
 
@@ -110,10 +110,9 @@ class UserSeeder extends Seeder {
                 'password'          => Hash::make( 'password' ),
                 'phone'             => '123-456',
                 'status'            => true,
-                'type'              => 1, // 1: admin, 2: manager
+                'type'              => 2, // 1: admin, 2: manager
                 'created_at' => now(),
             ],
-
 
         ];
 
